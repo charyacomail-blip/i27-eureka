@@ -10,5 +10,10 @@ pipeline {
                 echo "********* Testing Jenkins Pipeline*********"
             }
         }
+        stage ('State') {
+            steps {
+                echo "********* Testing Jenkins Pipeline*********"
+            }
+        }
     }
 }
