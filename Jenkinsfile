@@ -5,7 +5,7 @@ pipeline {
         label 'k8s-slave'
     }
     tools {
-        maven 'Maven-3.8.8'
+        maven 'apache-maven-3.8.8'
         jdk 'jdk-17'
     }
     environment {
@@ -15,6 +15,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
+                echo "*******************************"
                 echo "Building the ${env.APPLICATION_NAME} Application"
                 sh 'mvn clean package -Dskiptests=true'
             }
