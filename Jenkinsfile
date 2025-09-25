@@ -5,7 +5,7 @@ pipeline {
         label 'k8s-slave'
     }
     tools {
-        maven 'Maven-3.8.8'
+        maven 'apache-maven-3.8.8'
         jdk 'jdk-17'
     }
     environment {
