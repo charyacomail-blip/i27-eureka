@@ -15,6 +15,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
+                echo "*******************************"
                 echo "Building the ${env.APPLICATION_NAME} Application"
                 sh 'mvn clean package -Dskiptests=true'
             }
